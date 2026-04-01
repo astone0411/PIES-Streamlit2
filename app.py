@@ -81,7 +81,7 @@ def render_app():
 
     # Sidebar
     with st.sidebar:
-        st.markdown("### 🧪 Lab LIMS")
+        st.markdown("### 🧪 TART - PIES")
         st.caption(f"Signed in as **{st.session_state['display_name']}** ({st.session_state['role']})")
         st.divider()
 
