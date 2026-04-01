@@ -234,7 +234,9 @@ def _render_results(records: list, source_filename: str):
             return "background-color: #fff3cd; color: #664d03;"
         return ""
 
-    styled = filtered.style.applymap(
+    # .map() replaced .applymap() in pandas 2.1 — use whichever is available
+    _styler_fn = "map" if hasattr(filtered.style, "map") else "applymap"
+    styled = getattr(filtered.style, _styler_fn)(
         highlight_clinsig,
         subset=["ClinVar Significance"] if "ClinVar Significance" in filtered.columns else []
     )
