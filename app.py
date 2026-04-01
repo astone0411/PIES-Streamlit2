@@ -53,8 +53,8 @@ if "db_initialized" not in st.session_state:
 def render_login():
     col1, col2, col3 = st.columns([1, 2, 1])
     with col2:
-        st.markdown("## 🧪 Tertiary Analysis & Reporting Team")
-        st.markdown("## PIES - Patient Information Entry System")
+        st.markdown("# 🧪 Tertiary Analysis & Reporting Team")
+        st.markdown("# PIES - Patient Information Entry System")
         st.markdown("Please sign in to continue.")
         st.divider()
 
